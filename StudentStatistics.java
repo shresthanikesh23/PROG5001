@@ -26,5 +26,12 @@ public class StudentStatistics
                 marks[i] = mark;
             }
         }
+        // F4: Printing assignment name and marks
+        System.out.println("\nAssignment Name: " + assignmentName);
+        System.out.print("Marks: ");
+        for (double mark : marks) {
+            System.out.print(mark + " ");
+        }
+        System.out.println();
     }     
 }
