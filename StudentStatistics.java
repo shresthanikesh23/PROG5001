@@ -47,6 +47,23 @@ public class StudentStatistics
         }
         System.out.println("Highest Mark: " + highestMark);
         System.out.println("Lowest Mark: " + lowestMark);
-          
-    }     
+        
+    // F6: Calculating and Printing the Mean and Standard Deviation
+        double sum = 0;
+        for (double mark : marks) {
+            sum += mark;
+        }
+        double mean = sum / marks.length;
+        
+        double sumOfSquaredDifferences = 0;
+        for (double mark : marks) {
+            sumOfSquaredDifferences += Math.pow(mark - mean, 2);
+        }
+        double standardDeviation = Math.sqrt(sumOfSquaredDifferences / marks.length);
+        
+        System.out.println("Mean: " + mean);
+        System.out.println("Standard Deviation: " + standardDeviation);
+        
+        input.close();
+    }    
 }
