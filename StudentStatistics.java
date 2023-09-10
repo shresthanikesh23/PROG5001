@@ -26,12 +26,27 @@ public class StudentStatistics
                 marks[i] = mark;
             }
         }
-        // F4: Printing assignment name and marks
-        System.out.println("\nAssignment Name: " + assignmentName);
-        System.out.print("Marks: ");
-        for (double mark : marks) {
+    // F4: Printing assignment name and marks
+    System.out.println("\nAssignment Name: " + assignmentName);
+    System.out.print("Marks: ");
+    for (double mark : marks) {
             System.out.print(mark + " ");
         }
-        System.out.println();
+    System.out.println();
+    
+    // F5: Finding and printing the highest and lowest marks
+        double highestMark = marks[0];
+        double lowestMark = marks[0];
+        for (int i = 1; i < marks.length; i++) {
+            if (marks[i] > highestMark) {
+                highestMark = marks[i];
+            }
+            if (marks[i] < lowestMark) {
+                lowestMark = marks[i];
+            }
+        }
+        System.out.println("Highest Mark: " + highestMark);
+        System.out.println("Lowest Mark: " + lowestMark);
+          
     }     
 }
